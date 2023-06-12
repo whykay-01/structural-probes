@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 # get the path of the current working directory
 path = os.getcwd()
@@ -23,4 +24,13 @@ new_document.write("\end{document}\n")
 
 new_document.close()
 tikz_file.close()
-print("All the operations successfully completed. Open the output.tex file to see the intermediary result.")
+
+subprocess.call(['pdflatex', '-shell-escape', 'output.tex'])
+
+# # to remove the auxiliary files, use the following code:
+# import os
+# path = os.getcwd()
+# os.remove(path + "/output.aux")
+# os.remove(path + "/output.log")
+# os.remove(path + "/output.tex")
+
