@@ -1,3 +1,10 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize
+\begin{document}
+\begin{tikzpicture}
+
 \begin{dependency}[hide label, edge unit distance=.5ex]
     \begin{deptext}[column sep=0.05cm]
     From\& the\& AP\& comes\& this\& story\& : \\
@@ -940,3 +947,9 @@
 \depedge[edge style={red!60!}, edge below]{28}{35}{.}
 \depedge[edge style={red!60!}, edge below]{1}{14}{.}
 \end{dependency}
+
+
+\end{tikzpicture}
+\end{document}
+
+
